@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,11 +26,11 @@
         }
         .button {
             background-color: #ff4d4d;
-            color: white;
+color: white;
             font-size: 1.2em;
             padding: 15px 30px;
             border: none;
-border-radius: 10px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
             margin: 10px;
@@ -58,7 +57,7 @@ border-radius: 10px;
     <div class="heart">❤️</div>
 
     <!-- Add your question image here -->
-    <img src="your-question-image.jpg" alt="Question Image">
+    <img id="question-image" src="your-question-image.jpg" alt="Question Image">
 
     <p>So, here's a little website to ask you the most important question...</p>
 
@@ -68,18 +67,21 @@ border-radius: 10px;
 
     <!-- Hidden Images (initially) -->
     <img id="us-together" src="us-together.jpg" alt="Us Together" class="hidden">
-    <img id="broken-heart" src="broken-heart.jpg" alt="Broken Heart" class="hidden">
+<img id="broken-heart" src="broken-heart.jpg" alt="Broken Heart" class="hidden">
 
     <script>
         function valentineAnswer(answer) {
-// Hide the images before we show the right one
+            // Hide the question image once the answer is given
+            document.getElementById("question-image").classList.add("hidden");
+
+            // Hide the response images before showing the correct one
             document.getElementById("us-together").classList.add("hidden");
             document.getElementById("broken-heart").classList.add("hidden");
 
             // If the answer is YES
             if (answer === 'yes') {
                 document.getElementById("us-together").classList.remove("hidden"); // Show us-together image
-                alert('Yay! I am so happy you said YES! ❤️');
+                alert('Yay! I am so happy you said YES! I MISS YOU I CANT WAIT TO SEE YOU AGAIN♥️');
             } 
             // If the answer is NO
             else if (answer === 'no') {
@@ -88,11 +90,13 @@ border-radius: 10px;
                     alert("GOTCHA!!! YOU ALREADY ARE MY VALENTINE BAE ❤️");
                 } else {
                     document.getElementById("broken-heart").classList.remove("hidden"); // Show broken-heart image
-                    alert("NKT!HEBU ANZA AFRESH NA UFINYE YES😂");
-                }
+                    alert("NKT!HEBU ANZA AFRESH NA UFINYE YES😂ENDA CHINI UONE REACTION YANGU");
+}
             }
         }
     </script>
 
 </body>
 </html>
+
+
